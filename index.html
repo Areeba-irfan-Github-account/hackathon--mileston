@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Resume Builder</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Professional Resume Builder</h1>
+        <form id="resumeForm">
+            <div class="form-section">
+                <h2>Personal Information</h2>
+                <input type="text" id="name" placeholder="Full Name" required>
+                <input type="email" id="email" placeholder="Email Address" required>
+                <input type="tel" id="phone" placeholder="Phone Number" required>
+                <textarea id="about" placeholder="Write a brief summary about yourself (120 words max)" required maxlength="720"></textarea>
+                <input type="text" id="address" placeholder="Address" required>
+                <input type="text" id="linkedin" placeholder="LinkedIn Profile URL">
+                <input type="file" id="profilePicture" accept="image/*">
+            </div>
+
+            <div class="form-section">
+                <h2>Education</h2>
+                <div id="educationEntries">
+                    <div class="education-entry">
+                        <input type="text" placeholder="Degree" required>
+                        <input type="text" placeholder="Institution" required>
+                        <input type="text" placeholder="Graduation Year" required>
+                        <textarea placeholder="Achievements or Relevant Coursework"></textarea>
+                    </div>
+                </div>
+                <button type="button" id="addEducation">Add More Education</button>
+            </div>
+
+            <div class="form-section">
+                <h2>Work Experience</h2>
+                <div id="experienceEntries">
+                    <div class="experience-entry">
+                        <input type="text" placeholder="Job Title" required>
+                        <input type="text" placeholder="Company" required>
+                        <input type="text" placeholder="Duration" required>
+                        <textarea placeholder="Job Description" required></textarea>
+                        <textarea placeholder="Key Achievements"></textarea>
+                    </div>
+                </div>
+                <button type="button" id="addExperience">Add More Experience</button>
+            </div>
+
+            <div class="form-section">
+                <h2>Skills</h2>
+                <textarea id="skills" placeholder="List your skills (comma-separated)" required></textarea>
+                <div id="skillLevels">
+                    <!-- Skill levels will be dynamically added here -->
+                </div>
+            </div>
+
+            <button type="submit" id="generateResume">Generate Resume</button>
+        </form>
+    </div>
+
+    <div id="resumePreview" class="hidden">
+        <h2>Resume Preview</h2>
+        <div id="previewContent"></div>
+        <button id="printResume">Print Resume</button>
+        <button id="submitResume">Submit Resume</button>
+        <button id="cancelResume">Cancel</button>
+        <button id="shareResume">Share Resume</button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
